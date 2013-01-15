@@ -1,0 +1,757 @@
+@charset "utf-8";
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body, button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px / 1 Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 h2 h3 h4, h5, h6 {
+    font-size: 100%;
+}
+
+address, cite, dfn, var {
+    font-style: normal;
+}
+
+/* 将斜体扶正 */
+code, kbd, pre, samp, tt {
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* 统一等宽字体 */
+small {
+    font-size: 12px;
+}
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol {
+    list-style: none;
+}
+
+/* 重置文本格式元素 */
+a {
+    text-decoration: none;
+	cursor:pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+/* 重置表单元素 */
+legend {
+    color: #000;
+}
+
+/* for ie6 */
+img {
+    border: none;
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+/* table {
+ border-collapse: collapse;
+ border-spacing: 0;
+ } */
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html {
+    overflow-y: scroll;
+}
+.vhide{
+	visibility: hidden;
+}
+/*reset结束*/
+body {
+    margin-left: 0px;
+    margin-top: 1px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: white;
+    font-size: 12px;
+    color: #000;
+}
+
+form, fieldset, fieldset, h1, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+ol.decimal{
+    list-style: decimal inside;
+}
+.red {
+	color:red;
+}
+.top-bar {
+    background-color: white;
+    border-bottom: 1px solid #B8C9D6;
+    overflow: hidden;
+}
+
+.top-bar ul {
+    list-style: none;
+    margin: 10px;
+}
+
+.top-bar li {
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+
+.container {
+    height: 100%;
+	margin:5px 10px;
+}
+
+fieldset {
+    margin: 0 0 10px;
+    padding: 20px;
+	border:1px solid #B8C9D6;
+}
+
+legend {
+    margin: 0 15px;
+    padding: 5px;
+    font-weight: bold;
+	font-size:14px;
+}
+
+.button-bar {
+	text-align:left;
+    margin: 20px 0 0 50px;
+}
+
+.button-bar input, .submit {
+	border: 1px solid #5F5555;
+	background-color: white;
+	line-height: 25px;
+	height: 25px;
+	padding:0 12px;
+	*padding:0;
+	cursor:pointer;
+}
+
+a {
+    text-decoration: underline;
+    color: #36F;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #39F;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+.tip_box {
+    position: absolute;
+    top: 200px;
+    width: 420px;
+    left: 50%;
+    margin-left: -200px;
+    z-index: 2;
+    height: 90px;
+    padding: 10px 4px 10px;
+    word-break: break-all;
+    border: solid 1px gray;
+    background-color: #DBDBDB;
+    color: #36F;
+}
+
+.tip_box h1 {
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tip_box h1 a {
+    color: #000;
+    text-decoration: none;
+    float: right;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+textarea {
+    margin: 4px 0;
+}
+
+ul.isp_areas {
+    zoom: 1;
+    overflow: hidden;
+    margin-bottom: -1px;
+    position: relative;
+}
+
+ul.isp_areas li {
+    border-bottom:1px dotted gray;
+    width: 90%;
+    float: left;
+    text-align: left;
+	margin-left:15px;
+	padding-left:20px;
+}
+
+ul.isp_areas li span {
+    float: right;
+	padding-right:20px;
+}
+/* pager begin*/
+.pager{
+	text-align:center;
+	font-size:14px;
+	color:#797979;
+	padding:16px 0 40px;
+	line-height:18px;
+}
+.pager a{
+	color:#797979;
+	margin-right:3px;
+	color:#666;
+	font-size:14px;
+	text-decoration:none;
+	border:1px solid #97b5ca;
+	padding:2px 4px;
+}
+.pager a.next{ display:inline-block; width:50px;}
+.pager a:hover{
+	background:#1f6aa3;
+	text-decoration:underline;
+	color:#fff;
+	border:1px solid #97b5ca;
+	padding:2px 4px;
+}
+.pager #idGoto{width:30px; height:20px;border-color:#666 #ccc  #ccc #666; border-style:solid; border-width:1px; margin-right:5px;}
+.pager span{
+	margin-left:3px;
+	font-size:14px;
+	margin-right:3px;
+}
+.pager span.nowpage{
+	font-weight:bold;
+}
+
+/* pager end*/
+.warning{
+	font-size:16px;
+	font-weight:bold;
+	line-height:150px;
+}
+/* table begin */
+.table, .table-attribute {
+    margin: 10px 0 15px;
+    width: 100%;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+}
+.table-attribute {
+	margin:10px 0 0;
+	width
+}
+
+.table caption, .table-attribute caption {
+	font-weight:bold;
+	font-size:14px;
+	margin-bottom:3px;
+}
+.table-attribute caption {
+	text-align:left;
+	margin-left:50px;
+}
+
+.table tr, .table-attribute tr {
+    line-height: 30px;
+}
+
+.table thead tr th, table.table tfoot tr th, .table-attribute thead tr th, table.table-attribute tfoot tr th {
+    background-color: #e6EEEE;
+    padding: 4px;
+}
+
+.table thead tr .header, .table-attribute thead tr .header {
+    background-image: url(../image/bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+
+.table tbody td, .table-attribute tbody td {
+    color: #3D3D3D;
+	padding:0 5px;
+}
+
+td.pad-left {
+    padding-left: 5px;
+    text-align: left;
+}
+
+.table td, .table thead tr th, .table tfoot tr th, .table-attribute td, .table-attribute thead tr th, .table-attribute tfoot tr th {
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.table label {
+    margin-right: 10px;
+}
+
+.table label input {
+    margin-right: 3px;
+}
+
+.table label input {
+    margin-left: 3px;
+}
+
+td.pad-right {
+    padding-right: 5px;
+    text-align: right;
+}
+
+.table tbody tr.odd td {
+    background-color: #F0F0F6;
+}
+
+.table thead tr .headerSortUp {
+    background-image: url(../image/asc.gif);
+}
+
+.table thead tr .headerSortDown {
+    background-image: url(../image/desc.gif);
+}
+
+.table thead tr .headerSortDown, table.table thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+
+.arc-content{
+	margin:5px 1px;
+	padding:6px;
+	background-color:white;
+	border:1px solid #7E9DB9;
+}
+
+/* table end */
+.btn {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    cursor: pointer;
+    padding: 4px 10px;
+    _padding: 4px 10px 2px;
+    font-size: 14px;
+    outline: 0 !important;
+    position: relative;
+    margin: 2px 4px;
+}
+
+.btn-i {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    cursor: pointer;
+    padding: 4px 10px 4px 20px;
+    _padding: 4px 10px 2px 20px;
+    font-size: 14px;
+    outline: 0 !important;
+    position: relative;
+    margin: 2px 4px;
+}
+
+.btn-default, .btn-default:hover {
+    border: 1px solid #c5dbec;
+    background: #dfeffc url(../image/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
+    font-weight: bold;
+    color: #2e6e9e;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-default a, .btn-default a:hover {
+    color: #2e6e9e;
+    text-decoration: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-hover, .btn-hover:hover {
+    border: 1px solid #79b7e7;
+    background: #d0e5f5 url(../image/ui-bg_glass_75_d0e5f5_1x400.png) 50% 50% repeat-x;
+    font-weight: bold;
+    color: #1d5987;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-hover a, .btn-hover a:hover {
+    color: #1d5987;
+    text-decoration: none;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-active, .btn-active:hover {
+    border: 1px solid #79b7e7;
+    background: #f5f8f9 url(../image/ui-bg_inset-hard_100_f5f8f9_1x100.png) 50% 50% repeat-x;
+    font-weight: bold;
+    color: #e17009;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-active a, .btn-active a:hover {
+    color: #e17009;
+    outline: none;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.btn-disable, .btn-disable:hover, .btn-disactive, .btn-disactive:hover {
+    border: 1px solid #999;
+    background: #f5f8f9 url(../image/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x;
+    font-weight: bold;
+    color: #ccc;
+    outline: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.btn-disable a, .btn-disable a:hover, .btn-disactive a, .btn-disactive a:hover {
+    color: #ccc;
+    outline: none;
+    text-decoration: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+.icon {
+    height: 16px;
+    width: 16px;
+    display: block;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    margin: 0 5px 0 0;
+    position: absolute;
+    left: 3px;
+    top: 12px;
+    margin-top: -8px;
+    zoom: 1;
+}
+
+.btn-default .icon {
+    background-image: url(../image/ui-icons_6da8d5_256x240.png);
+    background-position: -112px -144px;
+}
+
+.btn-hover .icon {
+    background-image: url(../image/ui-icons_217bc0_256x240.png);
+    background-position: -112px -144px;
+}
+
+.btn-active .icon,.btn-disactive .icon {
+    background-image: url(../image/ui-icons_f9bd01_256x240.png);
+    background-position: -80px -144px;
+}
+
+.btn-disable .icon {
+    background-image: url(../image/ui-icons_d8e7f3_256x240.png);
+    background-position: -192px -96px;
+}
+.aid-top-bar{
+	overflow:hidden;
+	padding:10px 30px 10px 10px;
+}
+.btn-ex{
+	padding-right:5px;
+	border-right:1px #ccc solid;
+}
+#asktip{
+	color:#ff0000;
+}
+#qu-tree{
+	margin:10px 0 0;
+}
+#qu-tree input{
+	font-size:14px;
+	line-height:20px;
+	height:21px !important;
+}
+#ui-datepicker-div{
+	font-size:12px;
+}
+
+.explanation{
+	margin-top:30px;
+	padding:15px;
+	border:1px dotted gray;
+}
+.explanation h3{
+	margin-bottom:8px;
+}
+.explanation .content{
+	margin-left:10px;
+}
+.explanation .content li{
+	line-height:30px;
+}
+.explanation .example{
+	margin:5px 10px;
+	padding:0 15px;
+}
+.explanation .example legend{
+	margin:0;
+	padding:0 5px;
+}
+.explanation .example ul{
+	padding:0 0 10px 0;
+}
+.explanation .example li{
+	line-height:18px;
+}
+/*列表页中头部的注释*/
+.top-explanation {
+	padding-left:15px;
+	line-height:20px;
+	border:1px dotted gray;
+	*margin-top:6px;
+	overflow:hidden;
+	zoom:1;
+}
+.top-explanation strong, .top-explanation blockquote {
+	line-height:20px;
+	float:left;
+}
+/*搜索框*/
+.s_container{
+	border:1px dashed #B8C9D6;
+
+	overflow:hidden;
+	zoo:1;
+}
+.s_container legend{
+	background-color:white;
+	padding:1px 6px 0;
+	margin:0 15px;
+}
+.s_container label, .s_container label input{
+	margin-right:3px;
+}
+.s_container ul{
+	margin-bottom:10px;
+}
+.s_container li{
+	float:left;
+	padding-right:30px;
+	line-height:26px;
+	width:250px;
+}
+.s_container ul.cols-1{ float:left;}
+.s_container ul.cols-1 li{
+	width:100%;
+}
+.s_container ul.cols-3 li{
+	width:320px;
+}
+.s_container ul.cols-1 li .btn-search {
+	margin-left:30px;
+}
+.s_container li.colspan-2, .s_container ul.cols-3 li.colspan-2{
+	width:500px;
+}
+.s_container ul.cols-1 li #idUserid{
+	width:220px; 
+	background:#fefefe; 
+	border-style:solid; 
+	border-width:1px; 
+	border-color:#808080 #ccc #ccc #808080;
+	padding-top:3px;
+}
+.s_container li.s-search-btn{
+	clear:left;
+	line-height:50px;
+	margin:0 10px 0 100px;
+}
+.success-msg{
+	color:red;
+	font-weight:bold;
+	padding:15px 0 10px 260px;
+}
+.wait{
+	color:red !important;
+}
+
+.underway{
+	color:blue !important;
+}
+.player{
+	color:green !important;
+}
+ul.main-lists li{
+	line-height:22px;
+}
+
+.main-left{
+	float:left;
+	width:180px;
+	line-height:22px;
+}
+.main-left ul li {
+	display:block;
+}
+.main-left ul ul {
+	margin-left:30px;
+	margin-bottom:10px;
+}
+.main-right{
+	float:left;
+	height:100%;
+	border-left:1px solid gray;
+	padding-left:10px;
+}
+/*页面中的功能描述、介绍*/
+.introduction{
+	margin:0 20px 0 20px;
+	font-size:12px;
+	float:right;
+}
+.introduction h1,.introduction h2,.introduction h3,.introduction h4,.introduction h5,.introduction h6,.introduction p,.introduction li,.introduction pre{
+	margin:10px 0;
+}
+.introduction h1,.introduction h2,.introduction h3,.introduction h4{
+	line-height:32px;
+	height:32px;
+	font-size:18px;
+}
+.introduction h1,.introduction h2{
+	line-height:24px;
+	height:24px;
+	font-size:14px;
+}
+
+.introduction p,.introduction li,.introduction pre{
+	line-height:18px;
+	font-size:12px;
+}
+.remarks{
+	border:1px dashed gray;
+	margin:8px;
+	padding:10px;
+	line-height:22px;
+}
+.remarks ul{
+	margin-top:5px;
+}
+.remarks label{
+	margin-right:1px;
+}
+.row_stat{
+	font-weight:bold; background-color:#EFEFEF;
+}
+
+
+
+
+
+/*-----------------*/
+.edit { background:url(../image/icon.png) no-repeat left center; padding-left:22px;}
+.tabs-menu, .tabs-menu a{background:url(../image/x-rep.png) repeat-x 0 0; }
+.tabs-menu{
+	height:29px;
+	width:auto;
+	overflow:hidden;
+	zoom:1;
+	line-height:29px;
+	
+}
+
+.tabs-menu a{ 
+	padding:2px 10px; 
+	height:24px;
+	line-height:24px;
+	text-decoration:none;float:left;
+	height:24px;
+	border:1px solid #b8c9d6; 
+	-moz-border-radius:5px 5px 0px 0px;
+	display:block;
+	color:#666;
+	float:left;
+	margin-right:3px;
+	font-size:14px;
+	background-position:0px -29px;
+	font-weight:bold;
+	}
+.tabs-menu a:hover{
+	color:#4d7a9c;
+}
+.tabs-menu a:active, .tabs-menu a.active{
+	background:#fff;
+	border:1px solid #b8c9d6; 
+	-moz-border-radius:5px 5px 0px 0px;
+	color:#4d7a9c;
+}
+.cols-1{ margin:10px 0 10px 10px; padding-bottom:10px; }
+.cols-1 select{ float:left; margin-left:10px;}
+.s_container .cols-1 li #idUserid, .s_container .cols-1 li strong, .s_container .cols-1 li #SearchBtn{ float:left;}
+.s_container .cols-1 li #SearchBtn{ margin-top:-1px;}
+
+.p_a{ padding:0px 30px; font-size:14px; font-weight:bold;}
+.p_a a{ margin-left:10px; text-decoration:none;}
+.p_a a:hover{ text-decoration: underline;}
+
+div.msg {
+	margin: 20px 50px; 
+	padding: 5px; 
+	width: 40%; 
+	line-height: 1.3em;
+}
+div.error {
+	color: white; 
+	background-color: red; 
+}
+div.ok { 
+	color: white; 
+	background-color: green; 
+}
+.red_text {
+	color:#f46200;
+}
+span.text {
+	height:27px;
+	background-color:#f3f3f3;
+	color:#000;
+	font-size:14px;
+	line-height: 27px;
+	display: inline-block;
+}

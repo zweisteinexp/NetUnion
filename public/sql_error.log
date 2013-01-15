@@ -1,0 +1,8 @@
+INSERT INTO `union_settle_order`(user_id, website_id, ips, clicks, real_ips, real_clicks, amount, order_date, state)VALUES(1, 11, 0, 0, , , '0', '2011-05-24', 0)
+
+INSERT INTO `union_settle_order`(user_id, website_id, ips, clicks, real_ips, real_clicks, amount, order_date, state)VALUES(1, 11, 0, 0, , , '0', '2011-05-24', 0)
+
+SELECT COUNT(*) AS num FROM `union_advertise_train_item` WHERE ad_train_id IN ()
+
+SELECT * FROM `union_advertise` OREDER BY id ASC LIMIT 0, 2000
+
